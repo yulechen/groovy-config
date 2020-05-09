@@ -18,16 +18,16 @@ public class Main {
     public static void main(String[] args) throws URISyntaxException, IOException {
         URL resource = Main.class.getResource("/setting.groovy");
 
-//        CompilerConfiguration config =new CompilerConfiguration();
-//        ImportCustomizer importCustomizer = new ImportCustomizer();
-//
-//        importCustomizer.addImports("com.github.yulechen.gradleconfig.DefaultPlugin")
-//                .addImports("com.github.yulechen.gradleconfig.DefaultSetting")
-//                .addImports("com.github.yulechen.gradleconfig.Plugin")
-//                .addImports("com.github.yulechen.gradleconfig.Setting");
-//
-//        config.addCompilationCustomizers(importCustomizer);
-//        config.setScriptBaseClass(BaseScript.class.getName());
+        CompilerConfiguration config =new CompilerConfiguration();
+        ImportCustomizer importCustomizer = new ImportCustomizer();
+
+        importCustomizer.addImports("com.github.yulechen.gradleconfig.DefaultPlugin")
+                .addImports("com.github.yulechen.gradleconfig.DefaultSetting")
+                .addImports("com.github.yulechen.gradleconfig.Plugin")
+                .addImports("com.github.yulechen.gradleconfig.Setting");
+
+        config.addCompilationCustomizers(importCustomizer);
+        config.setScriptBaseClass(BaseScript.class.getName());
 
         GroovyShell shell = new GroovyShell();
 
